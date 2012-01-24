@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>frostbite.commands – Frostbite Server Command Structures &mdash; PyRCon 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyRCon 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="frostbite.serverstructs – Frostbite Server Information Structures" href="frostbite.serverstructs.html" />
+    <link rel="prev" title="frostbite.packet – frostbite packet serialization / deserialization" href="frostbite.packet.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.serverstructs.html" title="frostbite.serverstructs – Frostbite Server Information Structures"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-frostbite.commands">
+<span id="frostbite-commands-frostbite-server-command-structures"></span><h1><a class="reference internal" href="#module-frostbite.commands" title="frostbite.commands"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.commands</span></tt></a> &#8211; Frostbite Server Command Structures<a class="headerlink" href="#module-frostbite.commands" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="frostbite.commands.AdminEventsEnabled">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminEventsEnabled</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminEventsEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to begin sending events.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.AdminKickPlayer">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminKickPlayer</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminKickPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask the server to kick a player.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.AdminKillPlayer">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminKillPlayer</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminKillPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to kill a player.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.AdminListPlayers">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminListPlayers</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminListPlayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List current players.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.AdminMovePlayer">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminMovePlayer</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminMovePlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to move a player.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.AdminSay">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">AdminSay</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.AdminSay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a message to the in game chat.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListAdd">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListAdd</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to add someone to the ban list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListClear">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListClear</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListClear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to clear the banlist.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListList">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server for the ban list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListLoad">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListLoad</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListLoad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to load the ban list from disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListRemove">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListRemove</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to remove someone from the ban list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.BanListSave">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">BanListSave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.BanListSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to save the ban list from disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.FrostbiteMessage">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">FrostbiteMessage</tt><a class="headerlink" href="#frostbite.commands.FrostbiteMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a Frostbite message structure.</p>
+<dl class="method">
+<dt id="frostbite.commands.FrostbiteMessage.toPacket">
+<tt class="descname">toPacket</tt><big>(</big><em>seq</em><big>)</big><a class="headerlink" href="#frostbite.commands.FrostbiteMessage.toPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a packet structure that encapsulates the message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seq</strong> &#8211; Sequence number for the packet.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="frostbite.packet.html#module-frostbite.packet" title="frostbite.packet"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.packet</span></tt></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.GameAdminAdd">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">GameAdminAdd</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.GameAdminAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a player to the admin list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.GameAdminList">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">GameAdminList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.GameAdminList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to list the known admins.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.GameAdminLoad">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">GameAdminLoad</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.GameAdminLoad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to load the admin list from disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.GameAdminRemove">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">GameAdminRemove</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.GameAdminRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks th server to remove a player from the admin list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.GameAdminSave">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">GameAdminSave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.GameAdminSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to save the admin list to disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.LoginHashed">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">LoginHashed</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.LoginHashed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begins or ends a hashed login sequence.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.Logout">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">Logout</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.Logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logout from the server&#8217;s RCon</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListAdd">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListAdd</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to add a map to the map list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListClear">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListClear</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListClear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to clear the map list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListEndRound">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListEndRound</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListEndRound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to end the current round immediately.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListGetMapIndices">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListGetMapIndices</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListGetMapIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server for the current and next map indices</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListList">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to list the map list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListLoad">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListLoad</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListLoad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to load the map list from disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListRemove">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListRemove</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to delete a map from the map list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListRestartRound">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListRestartRound</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListRestartRound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to restart the round immediately.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListRunNextRound">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListRunNextRound</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListRunNextRound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to run the next round immediately.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListSave">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListSave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to save the map list to disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.MapListSetNextMapIndex">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">MapListSetNextMapIndex</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.MapListSetNextMapIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to set the next map to the specified index in the map list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnAuthenticated">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnAuthenticated</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnAuthenticated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player authenticates to the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnChat">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnChat</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnChat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player or the server sends a message.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnJoin">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnJoin</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnJoin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player joins the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnKill">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnKill</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnKill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player is killed.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnLeave">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnLeave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnLeave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player leaves the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnSpawn">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnSpawn</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnSpawn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player spawns.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnSquadChange">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnSquadChange</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnSquadChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player changes squads.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PlayerOnTeamChange">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PlayerOnTeamChange</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PlayerOnTeamChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when a player changes teams.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PunkBusterActivate">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PunkBusterActivate</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PunkBusterActivate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to activate punkbuster.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PunkBusterIsActive">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PunkBusterIsActive</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PunkBusterIsActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server if punkbuster is active.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PunkBusterOnMessage">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PunkBusterOnMessage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PunkBusterOnMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when PunkBuster emits a message.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.PunkBusterPb_sv_command">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">PunkBusterPb_sv_command</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.PunkBusterPb_sv_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to relay a command to punkbuster.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.Quit">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">Quit</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.Quit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quit from the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListAdd">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListAdd</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to add someone to the reserved slots list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListClear">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListClear</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListClear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the reserved slotslist.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListList">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to list the reserved slots.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListLoad">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListLoad</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListLoad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to load the reserved slots list from disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListRemove">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListRemove</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to remove someone from the reserved slots list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ReservedSlotsListSave">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ReservedSlotsListSave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ReservedSlotsListSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks the server to save the reserved slots list to disk.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ResponsePacket">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ResponsePacket</tt><big>(</big><em>response_code</em>, <em>*words</em><big>)</big><a class="headerlink" href="#frostbite.commands.ResponsePacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frostbite message that describes a response to another message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>response_code</strong> &#8211; String response code for the message</li>
+<li><strong>words</strong> &#8211; Response words for the message</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ServerInfo">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ServerInfo</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ServerInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks for basic info from the server.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ServerOnLevelLoaded">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ServerOnLevelLoaded</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ServerOnLevelLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when the server loads a new level.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ServerOnRoundOver">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ServerOnRoundOver</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ServerOnRoundOver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when the server ends a round.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ServerOnRoundOverPlayers">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ServerOnRoundOverPlayers</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ServerOnRoundOverPlayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when the server ends a round, containing player info.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.ServerOnRoundOverTeamScores">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">ServerOnRoundOverTeamScores</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.ServerOnRoundOverTeamScores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event raised when the server ends a round, containing team scores.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.commands.Version">
+<em class="property">class </em><tt class="descclassname">frostbite.commands.</tt><tt class="descname">Version</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#frostbite.commands.Version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asks for the server&#8217;s version.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="frostbite.packet.html"
+                        title="previous chapter"><tt class="docutils literal"><span class="pre">frostbite.packet</span></tt> &#8211; frostbite packet serialization / deserialization</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="frostbite.serverstructs.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">frostbite.serverstructs</span></tt> &#8211; Frostbite Server Information Structures</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/frostbite.commands.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.serverstructs.html" title="frostbite.serverstructs – Frostbite Server Information Structures"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             >previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Edward Ceaser.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

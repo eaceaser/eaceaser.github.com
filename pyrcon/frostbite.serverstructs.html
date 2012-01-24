@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>frostbite.serverstructs – Frostbite Server Information Structures &mdash; PyRCon 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyRCon 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="frostbite.crypt – Frostbite Authentication Helpers" href="frostbite.crypt.html" />
+    <link rel="prev" title="frostbite.commands – Frostbite Server Command Structures" href="frostbite.commands.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.crypt.html" title="frostbite.crypt – Frostbite Authentication Helpers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.commands.html" title="frostbite.commands – Frostbite Server Command Structures"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-frostbite.serverstructs">
+<span id="frostbite-serverstructs-frostbite-server-information-structures"></span><h1><a class="reference internal" href="#module-frostbite.serverstructs" title="frostbite.serverstructs"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.serverstructs</span></tt></a> &#8211; Frostbite Server Information Structures<a class="headerlink" href="#module-frostbite.serverstructs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="frostbite.serverstructs.Ban">
+<em class="property">class </em><tt class="descclassname">frostbite.serverstructs.</tt><tt class="descname">Ban</tt><a class="headerlink" href="#frostbite.serverstructs.Ban" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="frostbite.serverstructs.Map">
+<em class="property">class </em><tt class="descclassname">frostbite.serverstructs.</tt><tt class="descname">Map</tt><a class="headerlink" href="#frostbite.serverstructs.Map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="frostbite.serverstructs.OpenStruct">
+<em class="property">class </em><tt class="descclassname">frostbite.serverstructs.</tt><tt class="descname">OpenStruct</tt><a class="headerlink" href="#frostbite.serverstructs.OpenStruct" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="frostbite.serverstructs.OpenStruct.dict">
+<tt class="descname">dict</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.OpenStruct.dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.serverstructs.PlayerCollection">
+<em class="property">class </em><tt class="descclassname">frostbite.serverstructs.</tt><tt class="descname">PlayerCollection</tt><big>(</big><em>names</em>, <em>players</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a collection of players and information about them. Due to the way the frostbite protocol currently
+sends this info, it also provides a list of field names that are sent alongside the player list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>names</strong> &#8211; Array containing the field names</li>
+<li><strong>players</strong> &#8211; Array of arrays of players&#8217; info blocks.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="staticmethod">
+<dt id="frostbite.serverstructs.PlayerCollection.from_dict">
+<em class="property">static </em><tt class="descname">from_dict</tt><big>(</big><em>dict</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms a python dictionary of the form
+<cite>{&#8220;fields&#8221;: [field_names], &#8220;players&#8221;: [[player_info_block1, player_info_block2]]}</cite>
+into a player collection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dict</strong> &#8211; Dictionary</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">PlayerCollection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="frostbite.serverstructs.PlayerCollection.from_packet_array">
+<em class="property">static </em><tt class="descname">from_packet_array</tt><big>(</big><em>a</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.from_packet_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alternative constructor to return a PlayerCollection from a list of words from a packet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>a</strong> &#8211; Array of words from a packet returning a player info block.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">PlayerCollection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.PlayerCollection.get_field_names">
+<tt class="descname">get_field_names</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.get_field_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of field names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Array of field names.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.PlayerCollection.players">
+<tt class="descname">players</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.players" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of players&#8217; info blocks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Array of arrays containing players&#8217; info blocks</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.PlayerCollection.to_dict">
+<tt class="descname">to_dict</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a python dictionary of the form
+<cite>{&#8220;fields&#8221;: [field_names], &#8220;players&#8221;: [[player_info_block1, player_info_block2]]}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.PlayerCollection.to_packet_array">
+<tt class="descname">to_packet_array</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.PlayerCollection.to_packet_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method to return an array of words suitable for encoding this PlayerCollection into a packet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of words.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="frostbite.serverstructs.ServerState">
+<em class="property">class </em><tt class="descclassname">frostbite.serverstructs.</tt><tt class="descname">ServerState</tt><big>(</big><em>server_name</em>, <em>player_count</em>, <em>max_players</em>, <em>game_mode</em>, <em>map_name</em>, <em>current_round</em>, <em>total_rounds</em>, <em>num_teams</em>, <em>team_scores</em>, <em>target_scores</em>, <em>online_state</em>, <em>is_ranked</em>, <em>has_punkbuster</em>, <em>has_password</em>, <em>server_uptime</em>, <em>round_time</em>, <em>join_address</em>, <em>punkbuster_version</em>, <em>join_queue_enabled</em>, <em>region</em>, <em>ping_site</em>, <em>country</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.ServerState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure representing the basic state of a BF3 server.</p>
+<dl class="staticmethod">
+<dt id="frostbite.serverstructs.ServerState.from_dict">
+<em class="property">static </em><tt class="descname">from_dict</tt><big>(</big><em>d</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.ServerState.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alternative constructor that returns a ServerState structure from a python dictionary.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="frostbite.serverstructs.ServerState.from_packet_array">
+<em class="property">static </em><tt class="descname">from_packet_array</tt><big>(</big><em>a</em><big>)</big><a class="headerlink" href="#frostbite.serverstructs.ServerState.from_packet_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alternative constructor that returns a ServerState structure from a list of words from a
+Frostbite packet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.ServerState.to_dict">
+<tt class="descname">to_dict</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.ServerState.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that returns a python dictionary containing the information in this structure.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.serverstructs.ServerState.to_packet_array">
+<tt class="descname">to_packet_array</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.serverstructs.ServerState.to_packet_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that returns an array of words suitable for encoding in a Frostbite packet.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="frostbite.commands.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">frostbite.commands</span></tt> &#8211; Frostbite Server Command Structures</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="frostbite.crypt.html"
+                        title="next chapter"><tt class="docutils literal docutils literal"><span class="pre">frostbite.crypt</span></tt> &#8211; Frostbite Authentication Helpers</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/frostbite.serverstructs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.crypt.html" title="frostbite.crypt – Frostbite Authentication Helpers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.commands.html" title="frostbite.commands – Frostbite Server Command Structures"
+             >previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Edward Ceaser.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>frostbite.server – Frostbite Server &mdash; PyRCon 0.0.1 documentation</title>
+    <title>frostbite.crypt – Frostbite Authentication Helpers &mdash; PyRCon 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,8 +27,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="PyRCon 0.0.1 documentation" href="index.html" />
     <link rel="up" title="Reference" href="reference.html" />
-    <link rel="next" title="frostbite.packet – frostbite packet serialization / deserialization" href="frostbite.packet.html" />
-    <link rel="prev" title="frostbite.client – Frostbite Client" href="frostbite.client.html" /> 
+    <link rel="prev" title="frostbite.serverstructs – Frostbite Server Information Structures" href="frostbite.serverstructs.html" /> 
   </head>
   <body>
     <div class="related">
@@ -41,10 +40,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="frostbite.client.html" title="frostbite.client – Frostbite Client"
+          <a href="frostbite.serverstructs.html" title="frostbite.serverstructs – Frostbite Server Information Structures"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
           <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
@@ -56,59 +52,64 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-frostbite.server">
-<span id="frostbite-server-frostbite-server"></span><h1><a class="reference internal" href="#module-frostbite.server" title="frostbite.server"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.server</span></tt></a> &#8211; Frostbite Server<a class="headerlink" href="#module-frostbite.server" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="frostbite.server.FBServer">
-<em class="property">class </em><tt class="descclassname">frostbite.server.</tt><tt class="descname">FBServer</tt><big>(</big><em>socket</em>, <em>address</em>, <em>command_handler</em>, <em>event_handler</em><big>)</big><a class="headerlink" href="#frostbite.server.FBServer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Server that listens on a configured port and handles Frostbite 2 compatible commands.</p>
+  <div class="section" id="module-frostbite.crypt">
+<span id="frostbite-crypt-frostbite-authentication-helpers"></span><h1><a class="reference internal" href="#module-frostbite.crypt" title="frostbite.crypt"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.crypt</span></tt></a> &#8211; Frostbite Authentication Helpers<a class="headerlink" href="#module-frostbite.crypt" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="frostbite.crypt.auth">
+<tt class="descclassname">frostbite.crypt.</tt><tt class="descname">auth</tt><big>(</big><em>salt</em>, <em>secret</em>, <em>input</em><big>)</big><a class="headerlink" href="#frostbite.crypt.auth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a salt, secret, and input hash, tests whether the input hash matches the
+hash of the salt and secret.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>socket</strong> &#8211; </li>
-<li><strong>address</strong> &#8211; </li>
-<li><strong>command_handler</strong> &#8211; </li>
-<li><strong>event_handler</strong> &#8211; </li>
+<li><strong>salt</strong> &#8211; string</li>
+<li><strong>secret</strong> &#8211; string</li>
+<li><strong>input</strong> &#8211; hex encoded string</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="frostbite.server.FBServer.send">
-<tt class="descname">send</tt><big>(</big><em>seq</em>, <em>command</em><big>)</big><a class="headerlink" href="#frostbite.server.FBServer.send" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sends a message to the client attached to this server. Returns a handle
-to retrieve the response at a later time.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>seq</strong> &#8211; Sequence number of this message.</li>
-<li><strong>command</strong> &#8211; Frostbite Command structure.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><tt class="xref py py-mod docutils literal"><span class="pre">gevent.queue.AsyncResult</span></tt></p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Boolean</p>
 </td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
-<dl class="method">
-<dt id="frostbite.server.FBServer.start">
-<tt class="descname">start</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.server.FBServer.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Starts the Frostbite server&#8217;s event processor.</p>
-<p>Called by the <tt class="xref py py-mod docutils literal"><span class="pre">gevent.TCPServer</span></tt> listener.
-:return: Returns itself to allow chaining.</p>
+<dl class="function">
+<dt id="frostbite.crypt.get_salt">
+<tt class="descclassname">frostbite.crypt.</tt><tt class="descname">get_salt</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.crypt.get_salt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a hex-encoded cryptographically secure random salt string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Hex encoded string.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
+<dl class="function">
+<dt id="frostbite.crypt.hash_pass">
+<tt class="descclassname">frostbite.crypt.</tt><tt class="descname">hash_pass</tt><big>(</big><em>salt</em>, <em>secret</em><big>)</big><a class="headerlink" href="#frostbite.crypt.hash_pass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a salt and a secret, returns a hex-encoded MD5 hash of the two strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>salt</strong> &#8211; string</li>
+<li><strong>secret</strong> &#8211; string</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Hex encoded string.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -120,14 +121,11 @@ to retrieve the response at a later time.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="frostbite.client.html"
-                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">frostbite.client</span></tt> &#8211; Frostbite Client</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="frostbite.packet.html"
-                        title="next chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">frostbite.packet</span></tt> &#8211; frostbite packet serialization / deserialization</a></p>
+  <p class="topless"><a href="frostbite.serverstructs.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">frostbite.serverstructs</span></tt> &#8211; Frostbite Server Information Structures</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/frostbite.server.txt"
+    <li><a href="_sources/frostbite.crypt.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -157,10 +155,7 @@ to retrieve the response at a later time.</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="frostbite.client.html" title="frostbite.client – Frostbite Client"
+          <a href="frostbite.serverstructs.html" title="frostbite.serverstructs – Frostbite Server Information Structures"
              >previous</a> |</li>
         <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
           <li><a href="reference.html" >Reference</a> &raquo;</li> 
