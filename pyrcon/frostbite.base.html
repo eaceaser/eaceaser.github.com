@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>frostbite.base – Frostbite Server Base Communication Protocol &mdash; PyRCon 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyRCon 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="frostbite.packet – frostbite packet serialization / deserialization" href="frostbite.packet.html" />
+    <link rel="prev" title="Reference" href="reference.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-frostbite.base">
+<span id="frostbite-base-frostbite-server-base-communication-protocol"></span><h1><a class="reference internal" href="#module-frostbite.base" title="frostbite.base"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.base</span></tt></a> &#8211; Frostbite Server Base Communication Protocol<a class="headerlink" href="#module-frostbite.base" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="frostbite.base.FBBase">
+<em class="property">class </em><tt class="descclassname">frostbite.base.</tt><tt class="descname">FBBase</tt><big>(</big><em>socket</em>, <em>command_handler</em>, <em>event_handler</em><big>)</big><a class="headerlink" href="#frostbite.base.FBBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the base implementation of a frostbite communication class.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">socket</span></tt>: GEvent socket.</li>
+<li><tt class="docutils literal"><span class="pre">command_handler</span></tt>: Callback that gets passed a command when received off of the socket.</li>
+<li><tt class="docutils literal"><span class="pre">event_handler</span></tt>: Callback that gets passed an event when received off of the socket.</li>
+</ul>
+<dl class="method">
+<dt id="frostbite.base.FBBase.join">
+<tt class="descname">join</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.base.FBBase.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Joins to the protocol&#8217;s async processing units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.base.FBBase.stop">
+<tt class="descname">stop</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.base.FBBase.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the protocol&#8217;s async processing units.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="reference.html"
+                        title="previous chapter">Reference</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="frostbite.packet.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">frostbite.packet</span></tt> &#8211; frostbite packet serialization / deserialization</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/frostbite.base.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             >previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Edward Ceaser.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

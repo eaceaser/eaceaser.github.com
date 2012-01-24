@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>frostbite.server – Frostbite Server &mdash; PyRCon 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyRCon 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="frostbite.packet – frostbite packet serialization / deserialization" href="frostbite.packet.html" />
+    <link rel="prev" title="frostbite.client – Frostbite Client" href="frostbite.client.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.client.html" title="frostbite.client – Frostbite Client"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-frostbite.server">
+<span id="frostbite-server-frostbite-server"></span><h1><a class="reference internal" href="#module-frostbite.server" title="frostbite.server"><tt class="xref py py-mod docutils literal"><span class="pre">frostbite.server</span></tt></a> &#8211; Frostbite Server<a class="headerlink" href="#module-frostbite.server" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="frostbite.server.FBServer">
+<em class="property">class </em><tt class="descclassname">frostbite.server.</tt><tt class="descname">FBServer</tt><big>(</big><em>socket</em>, <em>address</em>, <em>command_handler</em>, <em>event_handler</em><big>)</big><a class="headerlink" href="#frostbite.server.FBServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Server that listens on a configured port and handles Frostbite 2 compatible commands.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>socket</strong> &#8211; </li>
+<li><strong>address</strong> &#8211; </li>
+<li><strong>command_handler</strong> &#8211; </li>
+<li><strong>event_handler</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="frostbite.server.FBServer.send">
+<tt class="descname">send</tt><big>(</big><em>seq</em>, <em>command</em><big>)</big><a class="headerlink" href="#frostbite.server.FBServer.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message to the client attached to this server. Returns a handle
+to retrieve the response at a later time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>seq</strong> &#8211; Sequence number of this message.</li>
+<li><strong>command</strong> &#8211; Frostbite Command structure.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><tt class="xref py py-mod docutils literal"><span class="pre">gevent.queue.AsyncResult</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="frostbite.server.FBServer.start">
+<tt class="descname">start</tt><big>(</big><big>)</big><a class="headerlink" href="#frostbite.server.FBServer.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the Frostbite server&#8217;s event processor.</p>
+<p>Called by the <tt class="xref py py-mod docutils literal"><span class="pre">gevent.TCPServer</span></tt> listener.
+:return: Returns itself to allow chaining.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="frostbite.client.html"
+                        title="previous chapter"><tt class="docutils literal"><span class="pre">frostbite.client</span></tt> &#8211; Frostbite Client</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="frostbite.packet.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">frostbite.packet</span></tt> &#8211; frostbite packet serialization / deserialization</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/frostbite.server.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="frostbite.packet.html" title="frostbite.packet – frostbite packet serialization / deserialization"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="frostbite.client.html" title="frostbite.client – Frostbite Client"
+             >previous</a> |</li>
+        <li><a href="index.html">PyRCon 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Edward Ceaser.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>
